@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+<style>
+    header{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 40px;
+        padding: 10px;
+    }
+    .shopper-title{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .pages{
+        font-size: 17px;
+         font-weight: bold;
+         margin-right: 5px;
+         margin-left: 5px;
+    }
+    .shopper-page ,.nav{
+        margin-top: 8px;
+    }
+    .nav span{
+        margin-right: 5px;
+         margin-left: 5px;
+    }
+    .after-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        width:100%;
+        height: 60px;
+    }
+    .HAPPY{
+        color: white;
+    }
+    .HAPPY span{
+        margin-left: 2px;
+        margin-right: 2px;
+        color: gold;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 4fr 4fr 4fr;
+        margin-top: 15px;
+    }
+    .wear-women{
+        background-image: url("./fruit/wear-women.png");
+        height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+    }
+    .wear-men{
+        background-image: url("./fruit/wear-men.png");
+        height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+    }
+    .wear-kids{
+        background-image: url("./fruit/wear-kids.png");
+        height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+    }
+    .wear-women:hover,.wear-men:hover,.wear-kids:hover{
+        opacity: 0.9;
+
+    }
+    
+    .h1-women{
+        width: 200px;
+        height: 100px;
+        margin-bottom: 90px;
+        text-align: center;
+        padding: 10px;
+        margin-top: 40px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .h1-men{
+        width: 200px;
+        height: 100px;
+        margin-bottom: 90px;
+        text-align: center;
+        padding: 10px;
+        margin-top: 40px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .h1-kids{
+        width: 200px;
+        height: 100px;
+        margin-bottom: 90px;
+        text-align: center;
+        padding: 10px;
+        margin-top: 40px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .women-btn{
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        font-weight: bold;
+        border: 2px solid gray;
+        font-size: 20px;
+        word-spacing:4px;
+        padding: 4px;
+    
+
+    }
+    .men-btn:hover .shop-men span{
+        margin-left: 10px;
+    }
+    .women-btn:hover .shop-women span{
+        margin-left: 10px;
+    }
+    .kids-btn:hover .shop-kid span{
+        margin-left: 10px;
+    }
+    .men-btn{
+        border: 2px solid gray;
+        text-align: center;
+        align-items: center;
+        background-color: white;
+        font-weight:bold ;
+        font-size: 20px;
+        word-spacing: 4px;
+        padding: 4px;
+    }
+    .kids-btn{
+        border: 2px solid gray;
+        text-align: center;
+        align-items: center;
+        background-color: white;
+        font-weight:bold ;
+        font-size: 20px;
+        word-spacing: 4px;
+        padding: 4px;
+       
+    }
+    p span{
+        color: black;
+        font-weight: bold;
+        font-size:19px ;
+
+    }
+.section-1{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    border-bottom: 3px solid black;
+}
+.about{
+    display: flex;
+    justify-content: space-between;
+}
+.truck,.repeat,.bag,.bookmarks{
+    color: red;
+    font-size: 20px;
+    margin-top: 21px;
+    margin-right: 20px;
+
+}
+.truck-title,.repeat-title,.bag-title,.bookmarks-title{
+   color: gray;
+}
+.section-2{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    
+}
+.COLLECTION{
+    text-align: center;
+    height: 200px;
+    padding: 15px;
+}
+.p{
+    font-size: 20px;
+}
+.h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+.section-3{
+    display:flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+   
+}
+.left-img-1{
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+}
+.left-img-1 img{
+    width: 750px;
+    height: 400px;
+} 
+.left-img-1:hover img{
+    width: 700px;
+    height: 400px;
+}
+.marq-1{
+    width: 50px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border: 3px dotted grey;
+    box-shadow: 5px 5px 8px grey;
+}
+.marq-div-1{
+    font-size: 20px;
+    font-weight: bold;
+}
+.right-img-1{
+    width:500px;
+    height: 400px;
+    overflow: hidden;
+}  
+.right-img-1 img{
+    width: 550px;
+    height: 400px;
+}
+.right-img-1:hover img{
+    width: 500px;
+    height: 400px;
+}
+.section-4{
+    display:flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+.left-img-2{
+    width: 500px;
+    height: 400px;
+    overflow: hidden;
+}
+.left-img-2 img{
+    width: 550px;
+    height: 400px;
+} 
+.left-img-2:hover img{
+    width: 500px;
+    height: 400px;
+}
+.right-img-2{
+    width:700px;
+    height: 400px;
+    overflow: hidden;
+}  
+.right-img-2 img{
+    width: 750px;
+    height: 400px;
+}
+.right-img-2:hover img{
+    width: 700px;
+    height: 400px;
+}
+.marq-2{
+    width: 50px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border: 3px dotted grey;
+    box-shadow: 5px 5px 8px grey;
+}
+.marq-div-2{
+    font-size: 20px;
+    font-weight: bold;
+}
+.section-5{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    margin-left: 67px;
+    margin-right: 67px;
+    margin-top: 30px;
+
+}
+
+.section-5-first{
+    background-image: url("./fruit/skirt.png");
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: aqua;
+    border-right: 1px solid gray;
+}
+.section-5-first:hover{
+    background-image: url("./fruit/skirt-1.png");
+}
+.section-5-second{
+    background-image: url("./fruit/top.png");
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: blue;
+    border-right: 1px solid gray;
+}
+.section-5-second:hover{
+    background-image: url("./fruit/top-1.png");
+}
+.section-5-third{
+    background-image:url("./fruit/top-bottom.png") ;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: crimson;
+    border-right: 1px solid gray;
+}
+.section-5-third:hover{
+    background-image: url("./fruit/one-piece.png");
+}
+.section-5-fourth{
+    background-image: url("./fruit/one-piece.png");
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: darkorange;
+}
+.section-5-fourth:hover{
+    background-image: url("./fruit/top-bottom.png");
+}
+.footer-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    background-color: black;
+    color: white;
+    margin-top: 30px;
+
+}
+.footer-div-1{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.footer-div-1-prt{
+    text-align: center;
+}
+.footer-div-2{
+    display: grid;
+    grid-template-columns:2.4fr 2.4fr 2.4fr 2.4fr 2.4fr ;
+    padding: 20px;
+}
+.footer-main-title{
+    font-size: 18px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    color: yellow;
+}
+.support{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.support~div{
+    color: gray;
+    margin-bottom: 3px;
+}
+.shop{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.shop~div{
+    color: gray;
+    margin-bottom: 3px;
+}
+.company{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.company~div{
+    color: gray;
+    margin-bottom: 3px;
+}
+.contact{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.icons{
+    border-right: 1px solid white;
+    margin-right: 5px;
+    margin-left: 5px;
+    text-align: center;
+    border-left: 1px solid white;
+}
+.our-support{
+    border-right: 1px solid white;
+    margin-right: 5px;
+    margin-left: 5px;
+    text-align: center;
+}
+.category{
+    border-right: 1px solid white;
+    margin-right: 5px;
+    margin-left: 5px;
+    text-align: center;
+}
+.terms{
+    border-right: 1px solid white;
+    margin-right: 5px;
+    margin-left: 5px;
+    text-align: center;
+}
+.find-us{
+    border-right: 1px solid white;
+    margin-right: 5px;
+    margin-left: 5px;
+    text-align: center;
+    position: ;
+}
+.sociam-media{
+    width: 100%;
+    padding: 10px;
+}
+.sociam-media span{
+    margin:10px;
+    font-size: 23px;
+    font-size: 20px;
+    transition: 1s;
+
+}
+.sociam-media span:hover{
+ background-color: brown;
+ font-size: 25px;
+ transition: 2s;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="shopper-title">shopper.</span>
+        </div>
+        <div class="shopper-page">
+            <span class="pages">Home</span>
+            <span class="pages">Catalog</span>
+            <span class="pages">Shop</span>
+            <span class="pages">Pages</span>
+            <span class="pages">Blog</span>
+            <span class="pages">Docs</span>
+        </div>
+        <div class="nav">
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart"></span>
+        </div>
+    </header>
+    <div class="after-header">
+        <div>
+            <p class="HAPPY"><span class="bi bi-lightning-charge-fill"></span> HAPPY HOLIDAY DEALS ON EVERYTHING <span class="bi bi-lightning-charge-fill"></span></p>
+        </div>
+    </div>
+    <main>
+        <div class="wear-women">
+            <div>
+                <div class="h1-women">
+                    <h1>Women</h1>
+                </div>
+
+                <div class="women-btn">
+                    <p class="shop-women">Shop Women <span class="bi bi-arrow-right-short"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="wear-men">
+            <div>
+                <div class="h1-men">
+                    <h1>Men</h1>
+                </div>
+
+                <div class="men-btn">
+                    <p class="shop-men">Shop Men <span class="bi bi-arrow-right-short"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="wear-kids">
+            <div>
+                <div class="h1-kids">
+                    <h1>Kids</h1>
+                </div>
+
+                <div class="kids-btn">
+                    <p class="shop-kid">Shop Kids <span class="bi bi-arrow-right-short"></span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="section-1">
+        <div class="about">
+            <div class="truck">
+                <span class="bi bi-truck"></span>
+            </div>
+            <div class="truck-title">
+                <h3 style="color:black;">FREE SHIPPING</h3>
+                <p>From all orders over $100</p>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="repeat">
+                <span  class="bi bi-repeat"></span>
+            </div>
+            <div class="repeat-title">
+                <h3 style="color:black">FREE RETURNS</h3>
+                <p>Return money within 30 days</p>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="bag">
+                <span class="bi bi-bag"></span>
+            </div>
+            <div class="bag-title">
+                <h3 style="color:black">SECURE SHOPPING</h3>
+                <p>You're in safe hands</p>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="bookmarks">
+                <span class="bi bi-bookmarks"></span>
+            </div>
+            <div class="bookmarks-title">
+                <h3 style="color:black;">OVER 10,000 STYLES</h3>
+                <p>We have everything you need</p>
+            </div>
+        </div>
+    </section>
+    <section class="section-2">
+        <div class="COLLECTION">
+            <p class="p">NEW COLLECTION</p>
+            <h1 class="h1">Best Picks 2019</h1>
+            <p>Appear, dry there darkness they're seas, dry waters thing fly midst. Beast, above fly<br> brought Very green.</p>
+        </div>
+    </section>
+    <div class="section-3">
+            <div class="left-img-1">
+                <img src="./fruit/sweater-2.png">
+            </div>
+
+            <div class="marq-1">
+                <div class="marq-div-1">
+                    <marquee direction="up"><span style="color:red;">T</span><br><span style="color:yellow;">O</span><br><span style="color:blue;">P</span><br><br><span style="color:firebrick">W</span><br><span style="color:deeppink">E</span><br><span style="color:magenta">A</span><br><span style="color:orange;">R</span><br><br><br><br><br><br></marquee>
+                </div>
+            </div>
+
+            <div class="right-img-1">
+                <img src="./fruit/sweater.png">
+            </div>
+        </div>
+
+
+    <div class="section-4">
+        <div class="left-img-2">
+            <img src="./fruit/collection.png">
+        </div>
+
+        <div class="marq-2">
+            <div class="marq-div-2">
+                <marquee direction="up"><span style="color:red;">T</span><br><span style="color:yellow;">O</span><br><span style="color:blue;">P</span><br><br><span style="color:firebrick">W</span><br><span style="color:deeppink">E</span><br><span style="color:magenta">A</span><br><span style="color:orange;">R</span><br><br><br><br><br><br></marquee>
+            </div>
+        </div>
+
+        <div class="right-img-2">
+            <img src="./fruit/mens-printed.png">
+        </div>
+    </div>
+   <div class="lady-section">
+    <section class="section-5">
+        <div class="section-5-first">
+
+        </div>
+
+        <div class="section-5-second">
+
+        </div>
+
+        <div class="section-5-third">
+
+        </div>
+
+        <div class="section-5-fourth">
+
+        </div>
+    </section>
+   </div>
+    <footer class="footer-1">
+        <div class="footer-div-1">
+            <div class="footer-div-1-prt">
+                <h1>Want style Ideas and Treats?</h1>
+                <div class="input-group">
+                    <input class="form-control" type="mail" placeholder="Enter Email *">
+                    <button class="btn btn-outline-danger">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-div-2">
+            <div class="icons">
+                <div class="footer-main-title"><marquee behavior="alternate">SHOPPER</marquee></div>
+                <div class="sociam-media">
+                    <span class="bi bi-facebook" style="color:darkorange;"></span>
+                    <span class="bi bi-youtube" style="color: cyan;"></span>
+                    <span class="bi bi-twitter" style="color:darkred;"></span>
+                    <span class="bi bi-instagram" style="color:gold;"></span>
+                </div>
+            </div>
+
+            <div class="our-support">
+                <div class="support">Support</div>
+                <div>Contact Us</div>
+                
+                <div>FAQs</div>
+                <div>Size Guide</div>
+                <div>Shipping & Returns</div>
+            </div>
+
+            <div class="category">
+                <div class="shop">shop</div>
+                <div>Men's</div>
+                <div>Shopping Woman's</div>
+                <div>Shopping Kids'</div>
+                <div>Shopping Discounts</div>
+            </div>
+
+            <div class="terms">
+                <div class="company">Company</div>
+                <div>Our Story</div>
+                <div>Careers</div>
+                <div>Terms & Conditions</div>
+                <div>Privacy & Cookie policy</div>
+            </div>
+
+            <div class="find-us">
+                <div class="contact">Contact</div>
+                <div>8109684478</div>
+                <div>sourabhpnd3995@gmail.com</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
